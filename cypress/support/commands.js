@@ -1,25 +1,9 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+import TodoPage from '../e2e/pages/todoPage';
+
+Cypress.Commands.add('addTwoItems', (item1, item2) => {
+    TodoPage.addTodoItem(item1);
+    TodoPage.addTodoItem(item2);
+    TodoPage.getItemText(0).should('contain', item1);
+    TodoPage.getItemText(1).should('contain', item2);
+    TodoPage.getTodoListCount().should('eq', 2);
+})

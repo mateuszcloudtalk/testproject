@@ -14,4 +14,9 @@ describe('TODO list', () => {
         TodoPage.getItemText(1).should('contain', TODO_ITEM_TWO);
         TodoPage.getTodoListCount().should('eq', 2);
     })
+    it('should toggle first item', () => {
+        cy.addTwoItems(TODO_ITEM_ONE, TODO_ITEM_TWO)
+        TodoPage.toggleTodoItem(0);
+        TodoPage.getItem(0).should('have.class', 'completed');
+    })
 })
