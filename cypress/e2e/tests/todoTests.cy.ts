@@ -1,4 +1,4 @@
-import TodoPage from '../pages/todoPage';
+import { TodoPage } from '../pages/todoPage';
 
 const TODO_ITEM_ONE = 'buy some cheese';
 const TODO_ITEM_TWO = 'feed the cat';

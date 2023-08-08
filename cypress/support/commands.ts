@@ -1,5 +1,5 @@
-import TodoPage from '../e2e/pages/todoPage';
-const todoPage = new TodoPage()
+import { TodoPage}  from '../e2e/pages/todoPage';
+const todoPage = new TodoPage();
 
 Cypress.Commands.add('addTwoItems', (item1: string, item2: string) => {
     todoPage.addTodoItem(item1);
