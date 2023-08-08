@@ -52,4 +52,4 @@ For more details on Cypress commands and best practices, refer to the [Cypress d
 - **Mateusz Koziel** - [mateuszcloudtalk](https://github.com/mateuszcloudtalk)
 
 ## 📄 License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License.
