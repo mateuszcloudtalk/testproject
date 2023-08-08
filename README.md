@@ -23,7 +23,7 @@ This project contains end-to-end tests for a TODO application using Cypress.
    npm install
    ```
 
-4. (Optional) Update the `cypress.json` or `cypress.config.js` with your application's URL or any other configurations you might want to change.
+4. (Optional) Update the `cypress.json` or `cypress.config.ts` with your application's URL or any other configurations you might want to change.
 
 ## 🏃‍♀️ Running the tests
 Execute the following command:
