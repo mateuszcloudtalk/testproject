@@ -1,25 +1,30 @@
-const TodoPage = {
-    newtodoInputField: '.new-todo',
-    todoList: '.todo-list',
-    todoListItem: '[data-id]',
-    toggleCheckbox: '.toggle',
-  
+class TodoPage {
+    constructor() {
+        this.newtodoInputField = '.new-todo';
+        this.todoList = '.todo-list';
+        this.todoListItem = '[data-id]';
+        this.toggleCheckbox = '.toggle';
+    }
+
     addTodoItem(todoText) {
-      return cy.get(this.newtodoInputField).type(todoText + '{enter}');
-    },
+        return cy.get(this.newtodoInputField).type(todoText + '{enter}');
+    }
+
     getItem(item) {
-        return cy.get(this.todoListItem).eq(item)
-    },
+        return cy.get(this.todoListItem).eq(item);
+    }
+
     getItemText(item) {
         return cy.get(this.todoListItem).eq(item).invoke('text');
-    },
+    }
+
     getTodoListCount() {
-      return cy.get(this.todoList).find('li').its('length');
-    },
+        return cy.get(this.todoList).find('li').its('length');
+    }
+
     toggleTodoItem(item) {
         return cy.get(this.toggleCheckbox).eq(item).click();
-    },
-  };
-  
-  export default TodoPage;
-  
+    }
+}
+
+export default TodoPage;
