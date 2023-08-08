@@ -1,17 +1,11 @@
 /// <reference types="cypress" />
 
 export class TodoPage {
-    newTodoInputField: string;
-    todoList: string;
-    todoListItem: string;
-    toggleCheckbox: string;
-
-    constructor() {
-        this.newTodoInputField = '.new-todo';
-        this.todoList = '.todo-list';
-        this.todoListItem = '[data-id]';
-        this.toggleCheckbox = '.toggle';
-    }
+    newTodoInputField = '.new-todo';
+    todoList = '.todo-list';
+    todoListItem = '[data-id]';
+    toggleCheckbox = '.toggle';
+    
 
     addTodoItem(todoText: string): Cypress.Chainable<JQuery<HTMLElement>> {
         return cy.get(this.newTodoInputField).type(todoText + '{enter}');
